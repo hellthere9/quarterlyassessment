@@ -18,7 +18,7 @@ $result = $conn->query($sql);
 <body>
     <div class="container mt-5">
         <h2 class="mb-4">
-        <a href="add_school.php?>" class="btn btn-primary btn-sm">Add</a>
+        <a href="index.php?pg=schadd" class="btn btn-primary btn-sm">Add</a>
         School List</h2>
         <table class="table table-bordered">
             <thead>

@@ -24,7 +24,7 @@ $conn->close();
 </head>
 <body>
     <div class="container mt-5">
-        <h2 class="mb-4"> <a href="addsubjectform.php?>" class="btn btn-primary btn-sm">Add</a>
+        <h2 class="mb-4"> <a href="index.php?pg=subjadd" class="btn btn-primary btn-sm">Add</a>
         Subjects</h2>
         <table class="table table-striped table-bordered">
             <thead>
