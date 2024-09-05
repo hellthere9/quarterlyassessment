@@ -91,12 +91,16 @@
                 </div>
             </li> -->
 
-            <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link active" href="index.php?pg=sch" >Display Schools</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?pg=subj" >Display Subjects</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php?pg=user" >Display Users</a>
+                        </li>
+
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -386,9 +390,12 @@
                             case 'schadd':
                                 include 'add_school.php';
                                 break;
-                            case 'subjadd':
-                                include 'addsubjectform.php';
-                                break;
+                            case 'user':
+                                include 'display_users.php';
+                                break; 
+                            case 'useradd':
+                                include 'add_users.php';
+                                break; 
                         }
                     }else{
                         echo "<h1>Welcome</h1>";
