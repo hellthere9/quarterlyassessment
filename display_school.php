@@ -39,7 +39,8 @@ $result = $conn->query($sql);
                             <td><?php echo htmlspecialchars($row['name']); ?></td> <!-- Display Name -->
                             <td><?php echo htmlspecialchars($row['division']); ?></td>
                             <td>
-                                <a href="edit_school.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm">Edit</a>
+                                <!-- <a href="edit_school.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm">Edit</a> -->
+                                <a href="index.php?pg=schooledit&&id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm">Edit</a>
                                 <a href="delete_school.php?id=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this record?');">Delete</a>
                             </td>
                         </tr>

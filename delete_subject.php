@@ -26,10 +26,10 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
                 unlink($filePath); // Delete the file
             }
             // Redirect to the display page with a success message
-            header("Location: display_subjects.php?message=Record deleted successfully");
+            header("Location: index.php?pg=subj&&message=Record deleted successfully");
         } else {
             // Redirect to the display page with an error message
-            header("Location: display_subjects.php?message=Error deleting record: " . $stmt->error);
+            header("Location: index.php?pg=subj&&message=Error deleting record: " . $stmt->error);
         }
         
         // Close the statement

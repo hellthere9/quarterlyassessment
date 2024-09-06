@@ -1,3 +1,8 @@
+<?php
+// Include the session verification script at the top of every restricted page
+include 'session_verification.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,11 +36,11 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">CB RAT <sup>2</sup></div>
             </a>
 
             <!-- Divider -->
@@ -43,7 +48,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -361,7 +366,7 @@
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="logout.php" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -390,12 +395,24 @@
                             case 'schadd':
                                 include 'add_school.php';
                                 break;
+                            case 'subjadd':
+                                include 'addsubjectform.php';
+                                break;
                             case 'user':
                                 include 'display_users.php';
                                 break; 
                             case 'useradd':
                                 include 'add_users.php';
                                 break; 
+                            case 'subjedit':
+                                include 'edit_subject.php';
+                                break; 
+                            case 'schooledit':
+                                include 'edit_school.php';
+                                break; 
+                            case 'useredit':
+                                include 'edit_user.php';
+                                break;
                         }
                     }else{
                         echo "<h1>Welcome</h1>";
@@ -441,7 +458,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="logout.php">Logout</a>
                 </div>
             </div>
         </div>

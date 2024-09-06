@@ -38,7 +38,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Execute the query and check if it was successful
     if ($stmt->execute()) {
-        echo "New record created successfully.";
+        header("Location: index.php?pg=subj");
+            exit();
     } else {
         echo "Error: " . $stmt->error;
     }
