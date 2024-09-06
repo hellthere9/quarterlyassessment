@@ -98,7 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Attempt to execute the prepared statement
             if ($stmt->execute()) {
                 // Redirect to the users list or display success message
-                header("location: display_users.php");
+                header("location: index.php?pg=user&&message=Record updated successfully");
                 exit();
             } else {
                 echo "Something went wrong. Please try again later.";
@@ -125,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="container mt-5">
         <h2 class="mb-4">Edit User</h2>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"] . "?id=" . $id); ?>" method="post">
+        <form action="edit_user.php?id=<?php echo htmlspecialchars($id); ?>" method="post">
             <div class="form-group">
                 <label>Username</label>
                 <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
@@ -143,7 +143,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Submit">
-                <a href="index.php?pg=subj" class="btn btn-secondary ml-2">Cancel</a>
+                <a href="index.php?pg=user" class="btn btn-secondary ml-2">Cancel</a>
             </div>
         </form>
     </div>

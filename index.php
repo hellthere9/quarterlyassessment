@@ -164,8 +164,8 @@ $username = $_SESSION['username'];
             <!-- Sidebar Message -->
             <div class="sidebar-card d-none d-lg-flex">
                 <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
-                <p class="text-center mb-2"><strong>This website was made possible by the DepEd Region X ICT Unit</strong>We extend our gratitude to the entire ICT team for their dedication and technical expertise in developing this platform, ensuring its functionality and accessibility for all users.</p>
-                <a class="btn btn-success btn-sm" href="https:r10.deped.gov.ph" target="_blank">DepEd X</a>
+                <p class="text-center mb-2"><strong>This website was made possible by the DepEd Region X ICT Unit.</strong> We extend our gratitude to the entire ICT team for their dedication and technical expertise in developing this platform, ensuring its functionality and accessibility for all users.</p>
+                <a class="btn btn-success btn-sm" href="https:r10.deped.gov.ph" target="_blank">Website</a>
             </div>
 
         </ul>
