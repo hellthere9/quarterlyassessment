@@ -14,7 +14,6 @@ $result = $conn->query($sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display Users</title>
     <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="container mt-5">
@@ -41,7 +40,7 @@ $result = $conn->query($sql);
                             <td><?php echo $row['created_at']; ?></td>
                             <td>
                                 <!-- Edit and Delete actions -->
-                                <a href="edit_user.php?id=<?php echo $row['id']; ?>" class="btn btn-warning btn-sm">Edit</a>
+                                <a href="index.php?pg=useredit&&id=<?php echo $row['id']; ?>" class="btn btn-warning btn-sm">Edit</a>
                                 <a href="delete_user.php?id=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this user?');">Delete</a>
                             </td>
                         </tr>
@@ -55,10 +54,6 @@ $result = $conn->query($sql);
         </table>
     </div>
 
-    <!-- Bootstrap JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
 
