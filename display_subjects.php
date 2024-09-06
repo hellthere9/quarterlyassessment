@@ -3,7 +3,11 @@
 include 'roxcon.php';
 
 // Fetch data from the subjects table
-$query = "SELECT * FROM subjects";
+if(isset($_GET['s'])){
+    $query = "SELECT * FROM subjects where `subject` like '%$_GET[s]%' ";
+}else{
+    $query = "SELECT * FROM subjects";
+}
 $result = $conn->query($query);
 
 if (!$result) {
@@ -31,7 +35,26 @@ $conn->close();
                                         ?>    
 
     <div class="container mt-5">
-        <h2 class="mb-4"> <a href="index.php?pg=subjadd" class="btn btn-primary btn-sm">Add</a>
+        <h2 class="mb-4">
+            
+        <!-- Topbar Search -->
+<form method="get" action="index.php"
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="hidden" name="pg" value="subj" >
+                            <input name="s" type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <!-- <input type="submit"> -->
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+        
+        
+        <a href="index.php?pg=subjadd" class="btn btn-primary btn-sm">Add</a>
         Subjects</h2>
         <table class="table table-striped table-bordered">
             <thead>
