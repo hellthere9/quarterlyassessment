@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Execute the query and check if it was successful
         if ($stmt->execute()) {
             // Redirect to the display page with a success message
-            header("Location: display_school.php?message=Record added successfully");
+            header("Location: index.php?pg=sch");
             exit();
         } else {
             $errors[] = "Error adding record: " . $stmt->error;
@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <?php endforeach; ?>
             </div>
         <?php endif; ?>
-        <form action="index.php?pg=sch" method="post">
+        <form action="add_school.php" method="post">
             <div class="form-group">
                 <label for="schoolid">School ID</label>
                 <input type="text" class="form-control" id="schoolid" name="schoolid" value="<?php echo htmlspecialchars($schoolid); ?>" maxlength="6" required>

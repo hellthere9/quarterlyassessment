@@ -59,10 +59,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Execute the update query
     if ($stmt->execute()) {
         // Redirect to the display page with a success message
-        header("Location: display_subjects.php?message=Record updated successfully");
+        header("Location: index.php?pg=subj&&message=Record updated successfully");
     } else {
         // Redirect to the display page with an error message
-        header("Location: display_subjects.php?message=Error updating record: " . $stmt->error);
+        header("Location: index.php?pg=subj&&message=Error updating record: " . $stmt->error);
     }
 
     // Close the statement and connection
