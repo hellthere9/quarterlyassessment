@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <?php endforeach; ?>
             </div>
         <?php endif; ?>
-        <form action="add_school.php" method="post">
+        <form action="index.php?pg=sch" method="post">
             <div class="form-group">
                 <label for="schoolid">School ID</label>
                 <input type="text" class="form-control" id="schoolid" name="schoolid" value="<?php echo htmlspecialchars($schoolid); ?>" maxlength="6" required>
